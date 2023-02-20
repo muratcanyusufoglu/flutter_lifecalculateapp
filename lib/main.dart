@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_lifealculator/childPage.dart';
+import 'package:flutter_lifealculator/homePage.dart';
 
 import 'input.dart';
 
@@ -17,7 +19,12 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.blue,
           brightness: Brightness.dark,
           accentColor: Colors.blueGrey),
-      home: Input(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Input(),
+        MyWidget.childPage: (context) => MyWidget(),
+        SecondPage.secondPage: (context) => SecondPage(),
+      },
     );
   }
 }
